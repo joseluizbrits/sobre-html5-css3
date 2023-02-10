@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
+    background-size: cover; /* para a imagem cobrir a tela toda*/
+    background-attachment: fixed; /* para não ter scroll */
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+section#telefone {
+    /* colocado a section#telefone no centro*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* corrigir a posição*/
+
+    /* altura e largura da section iguais a imagem do iPhone*/
+    height: 627px;
+    width: 311px;
+    background: url(../imagens/frame-iphone.png) no-repeat;
+}
+
+iframe#tela {
+    /* centralizando o iframe#tela na tela do celular */
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 267px;
+    height: 471px;
+}
+
+section#redes-sociais {
+    text-align: right;
+}
+
+/* "botões" com logos das redes sociais*/
+section#redes-sociais img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%; /* arredondando os logos "botões" */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    box-sizing: border-box; /* para a borda fazer parte do objeto*/
+}
+
+section#redes-sociais img:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transform: translate(-3px, -3px); /* deslocamento de 3px para esquerda e 3 px para a direita */
+    transition: transform .3s, border 0.1s; /* transição de 0.3 segundos para o deslocamento e de 0.1 segundo para o aparecimento da borda */
+}
