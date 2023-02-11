@@ -1,1 +1,122 @@
-@charset "UTF";
+@charset "UTF-8";
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#nav a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#header {
+    box-sizing: border-box; /* para manter o height de 70px */
+    height: 70px;
+    padding: 1rem; /* 1rem = 16px */
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e7e7e7;
+}
+
+#menu {
+    list-style: none;
+    /* Flexbox */
+    display: flex;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* tudo que está abaixo de 600px */
+@media (max-width: 600px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px; /* abaixo do header que tem 70px */
+        right: 0px;
+        background: #e7e7e7;
+        z-index: 1000; /* para garantir que fique por cima de todos os outros elementos */
+        /* intens que serão animados */
+        transition: .6s;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        /* animação dos itens*/
+        height: calc(100vh - 70px); /* tela interia menos 70px do header */
+        visibility: visible;
+        overflow-y: auto; /* permitir os scroll, caso necessário */
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+    
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    /* primeira barra do menu hamburguer. As próximas estarão logo abaixo */
+    #hamburguer {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    /* criando dois elementos dentro de um elemento, um antes (before) e outro depois (after). São as outras duas barras do menu hamburguer */
+    #hamburguer::before, #hamburguer::after {
+        content: ''; /* para um pseudoelemento before e after existir eles precisam de um conteúdo. Sendo que aqui não é necessário nenhum conteúdo */
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor; /* pega a cor do elemento principal */
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    /* eliminando uma barra */
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    /* girando uma barra */
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    /* girando outra barra */
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
