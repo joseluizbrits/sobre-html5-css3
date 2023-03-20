@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#carousel {
+    background-color: blue;
+    display: grid;
+    grid-auto-flow: column;
+    width: 100vw;
+    height: 400px;
+}
+
+#carousel #grid-central {
+    margin-top: 200px;
+}
+
+#btn-back, #btn-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-back span, #btn-next span {
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+#btn-back span::before { content: '<'; }
+#btn-next span::before { content: '>'; }
+
+#controllers {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.controller {
+    color: white;
+    width: 30px;
+    height: 5px;
+    cursor: pointer;
+}

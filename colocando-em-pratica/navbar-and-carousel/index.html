@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar & Carousel</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header id="header">
+        <a id="logo" href="#">BLOCO</a>
+        <nav id="navbar">
+            <ul id="menu">
+                <li><a href="#">Assuntos</a></li>
+                <li><a href="#">Personagens</a></li>
+                <li><a href="#">Dicas</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+            <button id="btn-mobile">
+                <span id="hamburguer"></span>
+            </button>
+        </nav>
+    </header>
+
+    <div id="carousel">
+        <div id="btn-back"><span></span></div>
+        <div id="grid-central">
+            <h1 id="tittle">Aqui mora Jucelino Kudapeste</h1>
+            <button id="btn-mais">Saiba mais</button>
+            <div id="controllers">
+                <button class="controller" id="controller-one"></button>
+                <button class="controller" id="controller-two"></button>
+                <button class="controller" id="controller-three"></button>
+            </div>
+        </div>
+        <div id="btn-next"><span></span></div>
+    </div>
+
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/carousel.js"></script>
+</body>
+</html>

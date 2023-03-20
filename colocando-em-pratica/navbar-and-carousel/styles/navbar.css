@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+body, html, ul {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: brown;
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+#header #logo {
+    text-decoration: none;
+    color: lightpink;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#header #menu {
+    background-color: brown;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    z-index: 9999;
+    transition: .6s;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+#navbar.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+}
+
+#header #menu li {
+    padding: 10px 0;
+    margin: 0px 20px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid lightgrey;
+    transition: all ease .2s;
+}
+#header #menu li:hover {
+    background-color: lightpink;
+}
+
+#header #menu li a {
+    height: 40px;
+    width: 100vw;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+#btn-mobile {
+    display: flex;
+    background: none;
+    border: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+#btn-mobile #hamburguer {
+    border-top: 2px solid white;
+    width: 20px;
+}
+
+#btn-mobile #hamburguer::before, #hamburguer::after {
+    /* Um pseudoelemento necessita de um conteúdo */
+    content: '';
+    /* Mostrando as duas barras */
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    /* Separando as duas barras */
+    margin-top: 5px;
+    /* Animação */
+    transition: all ease .3s;
+    position: relative;
+}
+
+#navbar.active #hamburguer {
+    border-top-color: transparent;
+}
+
+#navbar.active #hamburguer::before {
+    transform: rotate(135deg);
+}
+
+#navbar.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+@media screen and (min-width: 600px) {
+    #btn-mobile {
+        display: none;
+    }
+
+    #header #menu {
+        display: flex;
+        position: initial;
+        visibility: visible;
+        height: auto;
+    }
+
+    #header #menu li {
+        border-bottom: none;
+    }
+
+    #header #menu li a {
+        height: 40px;
+        width: auto;
+        color: white;
+        font-size: small;
+    }
+}

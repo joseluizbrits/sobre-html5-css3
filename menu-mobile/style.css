@@ -68,7 +68,7 @@ a {
         /* animação dos itens*/
         height: calc(100vh - 70px); /* tela interia menos 70px do header */
         visibility: visible;
-        overflow-y: auto; /* permitir os scroll, caso necessário */
+        overflow-y: auto; /* permitir o scroll, caso necessário */
     }
 
     #menu a {

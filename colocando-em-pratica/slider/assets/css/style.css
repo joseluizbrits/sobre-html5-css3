@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.slide {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slide .slide-item {
+    flex: none;
+    width: 39%;
+    scroll-snap-align: start;
+}
+
+.slide .slide-item img {
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas: "header header" "main aside" "footer footer";
+}
+
+header {
+    background-color: violet;
+    grid-area: header;
+}
+
+main {
+    background-color: yellow;
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+
+main #art-one {
+    background-color: mediumaquamarine;
+}
+
+main #art-two {
+    background-color: blueviolet;
+}
+
+aside {
+    background-color: blue;
+    grid-area: aside;
+}
+
+footer {
+    background-color: orangered;
+    grid-area: footer;
+}
