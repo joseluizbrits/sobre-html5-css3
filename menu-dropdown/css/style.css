@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar__logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+}
+
+.navbar__menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+.navbar__item:not(:first-child) {
+    margin-left: 30px;
+}
+
+.navbar__item a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.submenu {
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 34px);
+    max-width: max-content;
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1);
+    transform: translateY(15%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .2s, opacity .3s;
+}
+
+.submenu.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.submenu img {
+    width: 250px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.submenu__items {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.submenu__item {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.submenu__item:hover {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.submenu__item i {
+    font-size: 50px;
+    color: blueviolet;
+    margin-right: 10px;
+}
+
+.form {
+    padding: 30px 30px 20px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.form__input {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #bbb;
+}
+
+.form__input:not(:first-child) {
+    margin-top: 3px;
+}
+
+.form__btn {
+    display: block;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+main {
+    background-color: #eee;
+    width: 100vw;
+    height: 100vh;
+}

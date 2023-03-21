@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="navbar__logo"><a href="#">LOGO</a></h1>
+
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="#">Home</a></li>
+
+            <li class="navbar__item">
+                <a href="#" class="dropdown">Sobre</a>
+
+                <!-- Submenu -->
+                <div class="submenu">
+                    <img src="./img/img-tec.jpg" alt="Teclado com luz roxa">
+
+                    <div class="submenu__items">
+                        <div class="submenu__item">
+                            <i class="material-symbols-outlined">html</i>
+                            <h4>Curso HTML</h4>
+                        </div>
+
+                        <div class="submenu__item">
+                            <i class="material-symbols-outlined">css</i>
+                            <h4>Curso CSS</h4>
+                        </div>
+
+                        <div class="submenu__item">
+                            <i class="material-symbols-outlined">javascript</i>
+                            <h4>Curso JavaScript</h4>
+                        </div>
+
+                        <div class="submenu__item">
+                            <i class="material-symbols-outlined">php</i>
+                            <h4>Curso PHP</h4>
+                        </div>
+
+                        <div class="submenu__item">
+                            <i class="material-symbols-outlined">Smartphone</i>
+                            <h4>Curso Mobile</h4>
+                        </div>
+
+                        <div class="submenu__item">
+                            <i class="material-symbols-outlined">computer</i>
+                            <h4>Curso Web</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="navbar__item">
+                <a href="#" class="dropdown">Login</a>
+
+                <div class="submenu">
+                    <form class="form">
+                        <input type="email" class="form__input" placeholder="E-mail">
+                        <input type="password" class="form__input" placeholder="Senha">
+
+                        <button class="form__btn">Entrar</button>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main></main>
+</body>
+</html>
