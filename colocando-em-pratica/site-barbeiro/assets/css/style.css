@@ -66,8 +66,10 @@ input { outline: none; }
     align-items: center;
     border: 1px solid transparent;
     border-radius: 5px 5px 3px 3px;
+    position: relative;
     transition: all;
 }
+
 
 .navbar__link:hover {
     border: 1px solid rgba(0, 0, 0, .1);
@@ -81,6 +83,50 @@ input { outline: none; }
 
 .navbar__link-text p {
     min-width: max-content;
+}
+
+.dropdown.attendance {
+    width: 256px;
+    height: 304px;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 54px;
+    left: 0;
+    transition: transform .2s, opacity .3s;
+    transform: translateY(-15%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown.attendance.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.attendance .phone,
+.attendance .whatsapp,
+.attendance .email {
+    padding: 8px 16px 0px 16px;
+}
+
+.attendance .phone-title,
+.attendance .whatsapp-title,
+.attendance .email-title {
+    display: flex;
+    align-items: center;
+}
+
+.attendance .schedule {
+    margin: 20px 16px;
+    padding: 16px 0;
+    border-top: 1px solid #9c9c9c50;
+}
+
+.schedule .schedule-title {
+    display: flex;
+    align-items: center;
 }
 
 .menu {
