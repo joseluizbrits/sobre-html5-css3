@@ -67,9 +67,44 @@
 
             <li class="navbar__link">
                 <span class="material-symbols-outlined">account_circle</span>
+
                 <div class="navbar__link-text">
                     <p>Entrar ou</p>
                     <p><strong>Cadastrar</strong></p>
+                </div>
+
+                <div class="dropdown account">
+                    <div class="left">
+                        <span class="material-symbols-outlined">account_box</span>
+                        <p>Olá,</p>
+                        <p><strong>Bem-vindo!</strong></p>
+                        <button>Minha Conta</button>
+                    </div>
+
+                    <div class="right">
+                        <div class="register">
+                            <span class="material-symbols-outlined">add_circle</span>
+                            <p>Cadastrar</p>
+                        </div>
+
+                        <div class="enter">
+                            <span class="material-symbols-outlined">person</span>
+                            <p>Entrar</p>
+                        </div>
+
+                        <div class="requests">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                            <p>Meus Pedidos</p>
+                        </div>
+
+                        <div class="request-track">
+                            <div class="request-track-title">
+                                <span class="material-symbols-outlined">local_shipping</span>
+                                <p>Rastrear Pedido</p>
+                            </div>
+                            <input type="text" placeholder="Digite seu código">
+                        </div>
+                    </div>
                 </div>
             </li>
 
@@ -84,29 +119,43 @@
     </nav>
 
     <div class="menu">
-        <ul class="menu__items">
+        <ul class="menu__list">
             <li class="menu__item">
-                <a href="#" class="menu__dropdown">Máquinas de Corte</a>
+                <a href="#" class="menu__link drop">
+                    Máquinas de Corte
+                    <span class="material-symbols-outlined">expand_more</span>
+                </a>
             </li>
 
             <li class="menu__item">
-                <a href="#" class="menu__dropdown">Massageador</a>
+                <a href="#" class="menu__link">Massageador</a>
             </li>
 
             <li class="menu__item">
-                <a href="#" class="menu__dropdown">Máquinas de Acabamento</a>
+                <a href="#" class="menu__link drop">
+                    Máquinas de Acabamento
+                    <span class="material-symbols-outlined">expand_more</span>
+                </a>
             </li>
 
             <li class="menu__item">
-                <a href="#" class="menu__dropdown">Shaver</a>
+                <a href="#" class="menu__link drop">
+                    Shaver
+                    <span class="material-symbols-outlined">expand_more</span>
+                </a>
             </li>
 
             <li class="menu__item">
-                <a href="#" class="menu__dropdown">Kit de Máquinas</a>
+                <a href="#" class="menu__link">Kit de Máquinas</a>
             </li>
 
             <li class="menu__item">
-                <a href="#" class="menu__dropdown">Categorias</a>
+                <span></span>
+                <a href="#" class="menu__link drop">
+                    <span class="material-symbols-outlined">menu</span>
+                    Categorias
+                    <span class="material-symbols-outlined">expand_more</span>
+                </a>
             </li>
         </ul>
     </div>
