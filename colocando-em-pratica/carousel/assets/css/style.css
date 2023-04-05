@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body, html {
+    background-color: #777;
+}
+
+div {
+    display: flex;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    background-color: lightgray;
+    border: 1px solid gray;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .8);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+img {
+    flex: 1 0 calc(100% - 20px);
+    margin: 10px;
+    object-fit: cover;
+    transition: all .3s ease;
+}
